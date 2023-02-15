@@ -1,0 +1,17 @@
+<launch>
+    <node pkg="rosserial_python" type="serial_node.py" name="right_eye">
+        <rosparam>
+            baud: 57600
+            port: /dev/ttyACM0
+            right_mode: true
+        </rosparam>
+    </node>
+
+    <node pkg="rosserial_python" type="serial_node.py" name="left_eye">
+        <rosparam>
+            baud: 57600
+            port: /dev/ttyACM1
+            right_mode: false
+        </rosparam>
+    </node>
+</launch>
